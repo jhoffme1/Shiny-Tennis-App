@@ -1,7 +1,7 @@
 library(ggplot2)
 library(dplyr)
-install.packages(reshape2)
-library(reshape)
+library(reshape2)
+install.packages("reshape")
 
 View(WinnerBet)
 View(LoserBet)
@@ -14,48 +14,6 @@ View(top_10_scorers)
 ?top_n
 
 
-#top_10_scorers[top_10_scorers$name %>%  c("Kevin Anderson", "Marin Cilic"), ] #more names to add
-# View(out)
-# E_top_10= top_10_scorers %>% filter(name %in% c("Kevin Anderson", "Marin Cilic", "John Isner", "Lukas Dlouhy", "Andy Roddick", "Mark Philippoussis", "Sam Querrey", "
-#                                       Lukas Lacko", "Michael Yani", "Fabrice Santoro", "Ivo Karlovic"))
-# 
-# View(E_top_10)
-# 
-# #Seperated rounds on average total points
-# 
-# filtered_round_1= top_20_rounds %>% filter(round %in% c("1st Round"))
-# 
-# filtered_round_2= top_20_rounds %>% filter(round %in% c("2nd Round"))
-# 
-# filtered_round_3= top_20_rounds %>% filter(round %in% c("3rd Round"))
-# 
-# filtered_round_4= top_20_rounds %>% filter(round %in% c("4th Round"))
-# 
-# filtered_round_QF= top_20_rounds %>% filter(round %in% c("Quarterfinals")) 
-# 
-# filtered_round_SF= top_20_rounds %>% filter(round %in% c("Semifinals"))
-# 
-# filtered_round_F= top_20_rounds %>% filter(round %in% c("The Final"))
-# View(filtered_round_F)
-# 
-# 
-# 
-# #Seperated rounds on average experience
-# 
-# filtered_round_1= top_20_experience %>% filter(round %in% c("1st Round"))
-# 
-# filtered_round_2= top_20_experience %>% filter(round %in% c("2nd Round"))
-# 
-# filtered_round_3= top_20_experience %>% filter(round %in% c("3rd Round"))
-# 
-# filtered_round_4= top_20_experience %>% filter(round %in% c("4th Round"))
-# 
-# filtered_round_QF= top_20_experience %>% filter(round %in% c("Quarterfinals")) 
-# 
-# filtered_round_SF= top_20_experience %>% filter(round %in% c("Semifinals"))
-# 
-# filtered_round_F= top_20_experience %>% filter(round %in% c("The Final"))
-                                      
                                       
 #_______________________________
 
