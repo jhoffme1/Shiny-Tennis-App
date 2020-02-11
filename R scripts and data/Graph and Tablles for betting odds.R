@@ -123,9 +123,10 @@ Average_F_W= US_open_F_Win  %>%
 View(Average_F_W)
 names(Average_F_W)[names(Average_F_W) == "mean(B365W)"] <- "B365W"
 
-ggplot(Average_F_W, aes(x=B365W, y=Winner, group=1)) +
-  geom_point(size=5, shape=20)+
-  labs(title = "Average Betting Odds for Winning Player in US Open Final")
+ggplot(Average_F_W, aes(x=Winner, y=B365W)) +
+  geom_bar(stat= "identity", fill= "blue")+
+  labs(title = "Average Betting Odds for Winning Player in US Open Final")+
+  coord_flip()
 
 
 Average_F_L= US_open_F_Loss  %>% 
@@ -134,9 +135,10 @@ Average_F_L= US_open_F_Loss  %>%
 View(Average_F_L)
 names(Average_F_L)[names(Average_F_L) == "mean(B365L)"] <- "B365L"
 
-ggplot(Average_F_L, aes(x=B365L, y=Loser)) +
-  geom_point(size=5, shape=20)+
-  labs(title = "Average Betting Odds for Losing Player in US Open Final")
+ggplot(Average_F_L, aes(x=Loser, y=B365L)) +
+  geom_bar(stat= "identity", fill= "red")+
+  labs(title = "Average Betting Odds for Losing Player in US Open Final")+
+  coord_flip()
 
 
 French_open_F_Win= filtered_betw_F %>% filter(Tournament %in% c("French Open"))
@@ -152,9 +154,10 @@ Average_French_F_W= French_open_F_Win  %>%
 View(Average_French_F_W)
 names(Average_French_F_W)[names(Average_French_F_W) == "mean(B365W)"] <- "B365W"
 
-ggplot(Average_French_F_W, aes(x=B365W, y=Winner)) +
-  geom_point(size=5, shape=20) +
-  labs(title = "Average Betting Odds for Winning Player in French Open Final")
+ggplot(Average_French_F_W, aes(x=Winner, y=B365W)) +
+  geom_bar(stat= "identity", fill= "blue")+
+  labs(title = "Average Betting Odds for Winning Player in French Open Final")+
+  coord_flip()
 
 
 Average_French_F_L= French_open_F_Loss  %>% 
@@ -163,9 +166,10 @@ Average_French_F_L= French_open_F_Loss  %>%
 View(Average_French_F_L)
 names(Average_French_F_L)[names(Average_French_F_L) == "mean(B365L)"] <- "B365L"
 
-ggplot(Average_French_F_L, aes(x=B365L, y=Loser)) +
-  geom_point(size=5, shape=20)+
-  labs(title = "Average Betting Odds for Losing Player in French Open Final")
+ggplot(Average_French_F_L, aes(x=Loser, y=B365L)) +
+  geom_bar(stat= "identity", fill= "red")+
+  labs(title = "Average Betting Odds for Losing Player in French Open Final")+
+  coord_flip()
 
 
 Aussie_open_F_Win= filtered_betw_F %>% filter(Tournament %in% c("Australian Open"))
@@ -181,9 +185,10 @@ Average_Aussie_F_W= Aussie_open_F_Win  %>%
 View(Average_Aussie_F_W)
 names(Average_Aussie_F_W)[names(Average_Aussie_F_W) == "mean(B365W)"] <- "B365W"
 
-ggplot(Average_Aussie_F_W, aes(x=B365W, y=Winner)) +
-  geom_point(size=5, shape=20)+
-  labs(title = "Average Betting Odds for Winning Player in Australian Open Final")
+ggplot(Average_Aussie_F_W, aes(x=Winner, y=B365W)) +
+  geom_bar(stat= "identity", fill= "blue")+
+  labs(title = "Average Betting Odds for Winning Player in Aussie Open Final")+
+  coord_flip()
 
 
 Average_Aussie_F_L= Aussie_open_F_Loss  %>% 
@@ -192,9 +197,11 @@ Average_Aussie_F_L= Aussie_open_F_Loss  %>%
 View(Average_Aussie_F_L)
 names(Average_Aussie_F_L)[names(Average_Aussie_F_L) == "mean(B365L)"] <- "B365L"
 
-ggplot(Average_Aussie_F_L, aes(x=B365L, y=Loser)) +
-  geom_point(size=5, shape=20)+
-  labs(title = "Average Betting Odds for Losing Player in Australian Open Final")
+ggplot(Average_Aussie_F_L, aes(x=Loser, y=B365L)) +
+  geom_bar(stat= "identity", fill= "red")+
+  labs(title = "Average Betting Odds for Losing Player in Aussie Open Final")+
+  coord_flip()
+
 
 
 Wimbledon_F_Win= filtered_betw_F %>% filter(Tournament %in% c("Wimbledon"))
@@ -210,9 +217,11 @@ Average_Wimbledon_F_W= Wimbledon_F_Win  %>%
 View(Average_Wimbledon_F_W)
 names(Average_Wimbledon_F_W)[names(Average_Wimbledon_F_W) == "mean(B365W)"] <- "B365W"
 
-ggplot(Average_Wimbledon_F_W, aes(x=B365W, y=Winner)) +
-  geom_point(size=5, shape=20)+
-  labs(title = "Average Betting Odds for Winning Player in Wimbledon Final")
+ggplot(Average_Wimbledon_F_W, aes(x=Winner, y=B365W)) +
+  geom_bar(stat= "identity", fill= "blue")+
+  labs(title = "Average Betting Odds for Winning Player in Wimbledon Final")+
+  coord_flip()
+
 
 
 Average_Wimbledon_F_L= Wimbledon_F_Loss  %>% 
@@ -221,9 +230,10 @@ Average_Wimbledon_F_L= Wimbledon_F_Loss  %>%
 View(Average_Wimbledon_F_L)
 names(Average_Wimbledon_F_L)[names(Average_Wimbledon_F_L) == "mean(B365L)"] <- "B365L"
 
-ggplot(Average_Wimbledon_F_L, aes(x=B365L, y=Loser)) +
-  geom_point(size=5, shape=20)+
-  labs(title = "Average Betting Odds for Losing Player in Wimbledon Final")
+ggplot(Average_Wimbledon_F_L, aes(x=Loser, y=B365L)) +
+  geom_bar(stat= "identity", fill= "red")+
+  labs(title = "Average Betting Odds for Losing Player in Wimbledon Final")+
+  coord_flip()
 
 ##Winnin/Losing betting odds for each First round tournaments 
 
@@ -911,11 +921,11 @@ Average_US_QF_W= US_open_QF_Win  %>%
 View(Average_US_QF_W)
 names(Average_US_QF_W)[names(Average_US_QF_W) == "mean(B365W)"] <- "B365W"
 
-ggplot(Average_US_QF_W, aes(x=B365W, y=Winner)) +
-  geom_point(size=5, shape=20) +
-  theme_minimal() +
-  theme(axis.text.y= element_text(size= 7)) +
-  labs(title ="Average Betting Odds for Winning players in US QF")
+ggplot(Average_US_QF_W, aes(x=Winner, y=B365W)) +
+  geom_bar(stat= "identity", fill= "blue")+
+  labs(title = "Average Betting Odds for Winning Player in US Open QuarterFinal")+
+  coord_flip()
+
 
 
 # qplot(Average_US_QF_W$B365W, geom="histogram",
@@ -935,11 +945,12 @@ Average_QF_US_L= US_open_QF_Loss  %>%
 View(Average_QF_US_L)
 names(Average_QF_US_L)[names(Average_QF_US_L) == "mean(B365L)"] <- "B365L"
 
-ggplot(Average_QF_US_L, aes(x=B365L, y=Loser)) +
-  geom_point(size=5, shape=20) +
+ggplot(Average_QF_US_L, aes(x=Loser, y=B365L)) +
+  geom_bar(stat= "identity", fill= "red")+
   theme_minimal() +
-  theme(axis.text.y= element_text(size= 7)) +
-  labs(title ="Average Betting Odds for Losing players in US QF")
+  theme(axis.text.y= element_text(size= 8)) +
+  labs(title = "Average Betting Odds for Losing Player in US Open QuarterFinal")+
+  coord_flip()
 
 
 # qplot(Average_US_QF_L$B365L, geom="histogram",
@@ -965,10 +976,9 @@ Average_French_QF_W= French_open_QF_Win  %>%
 View(Average_French_QF_W)
 names(Average_French_QF_W)[names(Average_French_QF_W) == "mean(B365W)"] <- "B365W"
 
-ggplot(Average_French_QF_W, aes(x=B365W, y=Winner)) +
-  geom_point(size=5, shape=20) +
-  theme_minimal() +
-  theme(axis.text.y= element_text(size= 7)) +
+ggplot(Average_French_QF_W, aes(x=Winner, y=B365W)) +
+  geom_bar(stat= "identity", fill= "blue")+
+  coord_flip()+
   labs(title ="Average Betting Odds for Winning players in French Open QF")
 
 
@@ -989,10 +999,11 @@ Average_French_QF_L= French_open_QF_Loss  %>%
 View(Average_French_QF_L)
 names(Average_French_QF_L)[names(Average_French_QF_L) == "mean(B365L)"] <- "B365L"
 
-ggplot(Average_French_QF_L, aes(x=B365L, y=Loser)) +
-  geom_point(size=5, shape=20) +
+ggplot(Average_French_QF_L, aes(x=Loser, y=B365L)) +
+  geom_bar(stat= "identity", fill= "red")+
+  coord_flip()+
   theme_minimal() +
-  theme(axis.text.y= element_text(size= 7)) +
+  theme(axis.text.y= element_text(size= 8)) +
   labs(title ="Average Betting Odds for Losing players in French Open QF")
 
 
@@ -1021,10 +1032,9 @@ Average_Aussie_QF_W= Australian_open_QF_Win  %>%
 View(Average_Aussie_QF_W)
 names(Average_Aussie_QF_W)[names(Average_Aussie_QF_W) == "mean(B365W)"] <- "B365W"
 
-ggplot(Average_Aussie_QF_W, aes(x=B365W, y=Winner)) +
-  geom_point(size=5, shape=20) +
-  theme_minimal() +
-  theme(axis.text.y= element_text(size= 7)) +
+ggplot(Average_Aussie_QF_W, aes(x=Winner, y=B365W)) +
+  geom_bar(stat= "identity", fill= "blue")+
+  coord_flip()+
   labs(title ="Average Betting Odds for Winning players in Aussie Open QF")
 
 
@@ -1045,10 +1055,11 @@ Average_Aussie_QF_L= Australian_open_QF_Loss  %>%
 View(Average_Aussie_QF_L)
 names(Average_Aussie_QF_L)[names(Average_Aussie_QF_L) == "mean(B365L)"] <- "B365L"
 
-ggplot(Average_Aussie_QF_L, aes(x=B365L, y=Loser)) +
-  geom_point(size=5, shape=20) +
+ggplot(Average_Aussie_QF_L, aes(x=Loser, y=B365L)) +
+  geom_bar(stat= "identity", fill= "red")+
+  coord_flip()+
   theme_minimal() +
-  theme(axis.text.y= element_text(size= 7)) +
+  theme(axis.text.y= element_text(size= 8)) +
   labs(title ="Average Betting Odds for Losing players in Aussie Open QF")
 
 
@@ -1065,8 +1076,9 @@ Average_Wimbledon_QF_W= Wimbledon_QF_Win  %>%
 View(Average_Wimbledon_QF_W)
 names(Average_Wimbledon_QF_W)[names(Average_Wimbledon_QF_W) == "mean(B365W)"] <- "B365W"
 
-ggplot(Average_Wimbledon_QF_W, aes(x=B365W, y=Winner)) +
-  geom_point(size=5, shape=20) +
+ggplot(Average_Wimbledon_QF_W, aes(x=Winner, y=B365W)) +
+  geom_bar(stat= "identity", fill= "blue")+
+  coord_flip()+
   theme_minimal() +
   theme(axis.text.y= element_text(size= 7)) +
   labs(title ="Average Betting Odds for Winning players in Wimbledon QF")
@@ -1090,10 +1102,11 @@ View(Average_Wimbledon_QF_L)
 names(Average_Wimbledon_QF_L)[names(Average_Wimbledon_QF_L) == "mean(B365L)"] <- "B365L"
 
 
-ggplot(Average_Wimbledon_QF_L, aes(x=B365L, y=Loser)) +
-  geom_point(size=5, shape=20) +
+ggplot(Average_Wimbledon_QF_L, aes(x=Loser, y=B365L)) +
+  geom_bar(stat= "identity", fill= "red")+
+  coord_flip()+
   theme_minimal() +
-  theme(axis.text.y= element_text(size= 5)) +
+  theme(axis.text.y= element_text(size= 8)) +
   labs(title ="Average Betting Odds for Losing players in Wimbledon QF")
 
 
@@ -1123,10 +1136,11 @@ View(Average_US_SF_W)
 names(Average_US_SF_W)[names(Average_US_SF_W) == "mean(B365W)"] <- "B365W"
 
 
-ggplot(Average_US_SF_W, aes(x=B365W, y=Winner)) +
-  geom_point(size=5, shape=20) +
+ggplot(Average_US_SF_W, aes(x=Winner, y=B365W)) +
+  geom_bar(stat= "identity", fill= "blue")+
+  coord_flip()+
   theme_minimal() +
-  theme(axis.text.y= element_text(size= 7)) +
+  theme(axis.text.y= element_text(size= 8)) +
   labs(title ="Average Betting Odds for Winning players in US Open SF")
 
 
@@ -1137,10 +1151,11 @@ Average_SF_US_L= US_open_SF_Loss  %>%
 View(Average_SF_US_L)
 names(Average_SF_US_L)[names(Average_SF_US_L) == "mean(B365L)"] <- "B365L"
 
-ggplot(Average_SF_US_L, aes(x=B365L, y=Loser)) +
-  geom_point(size=5, shape=20) +
+ggplot(Average_SF_US_L, aes(x=Loser, y=B365L)) +
+  geom_bar(stat= "identity", fill= "red")+
+  coord_flip()+
   theme_minimal() +
-  theme(axis.text.y= element_text(size= 7)) +
+  theme(axis.text.y= element_text(size= 8)) +
   labs(title ="Average Betting Odds for Losing players in US Open SF")
 
 
@@ -1158,8 +1173,9 @@ Average_French_SF_W= French_open_SF_Win  %>%
 View(Average_French_SF_W)
 names(Average_French_SF_W)[names(Average_French_SF_W) == "mean(B365W)"] <- "B365W"
 
-ggplot(Average_French_SF_W, aes(x=B365W, y=Winner)) +
-  geom_point(size=5, shape=20) +
+ggplot(Average_French_SF_W, aes(x=Winner, y=B365W)) +
+  geom_bar(stat= "identity", fill= "blue")+
+  coord_flip()+
   labs(title = "Average Betting Odds for Winning Player in French SF")
 
 
@@ -1169,8 +1185,9 @@ Average_French_SF_L= French_open_SF_Loss  %>%
 View(Average_French_SF_L)
 names(Average_French_SF_L)[names(Average_French_SF_L) == "mean(B365L)"] <- "B365L"
 
-ggplot(Average_French_SF_L, aes(x=B365L, y=Loser)) +
-  geom_point(size=5, shape=20) +
+ggplot(Average_French_SF_L, aes(x=Loser, y=B365L)) +
+  geom_bar(stat= "identity", fill= "red")+
+  coord_flip()+
   labs(title = "Average Betting Odds for Losing Player in French SF")
 
 
@@ -1188,8 +1205,9 @@ Average_Aussie_SF_W= Australian_open_SF_Win  %>%
 View(Average_Aussie_SF_W)
 names(Average_Aussie_SF_W)[names(Average_Aussie_SF_W) == "mean(B365W)"] <- "B365W"
 
-ggplot(Average_Aussie_SF_W, aes(x=B365W, y=Winner)) +
-  geom_point(size=5, shape=20) +
+ggplot(Average_Aussie_SF_W, aes(x=Winner, y=B365W)) +
+  geom_bar(stat= "identity", fill= "blue")+
+  coord_flip()+
   labs(title = "Average Betting Odds for Winning Player in Aussie SF")
 
 
@@ -1200,8 +1218,9 @@ Average_Aussie_SF_L= Australian_open_SF_Loss  %>%
 View(Average_Aussie_SF_L)
 names(Average_Aussie_SF_L)[names(Average_Aussie_SF_L) == "mean(B365L)"] <- "B365L"
 
-ggplot(Average_Aussie_SF_L, aes(x=B365L, y=Loser)) +
-  geom_point(size=5, shape=20) +
+ggplot(Average_Aussie_SF_L, aes(x=Loser, y=B365L)) +
+  geom_bar(stat= "identity", fill= "red")+
+  coord_flip()+
   labs(title = "Average Betting Odds for Losing Player in Aussie SF")
 
 
@@ -1221,8 +1240,9 @@ Average_Wimbledon_SF_W= Wimbledon_SF_Win  %>%
 View(Average_Wimbledon_SF_W)
 names(Average_Wimbledon_SF_W)[names(Average_Wimbledon_SF_W) == "mean(B365W)"] <- "B365W"
 
-ggplot(Average_Wimbledon_SF_W, aes(x=B365W, y=Winner)) +
-  geom_point(size=5, shape=20) +
+ggplot(Average_Wimbledon_SF_W, aes(x=Winner, y=B365W)) +
+  geom_bar(stat= "identity", fill= "blue")+
+  coord_flip()+
   labs(title = "Average Betting Odds for Winning Player in Wimbledon SF")
 
 
@@ -1233,8 +1253,9 @@ Average_Wimbledon_SF_L= Wimbledon_SF_Loss  %>%
 View(Average_Wimbledon_SF_L)
 names(Average_Wimbledon_SF_L)[names(Average_Wimbledon_SF_L) == "mean(B365L)"] <- "B365L"
 
-ggplot(Average_Wimbledon_SF_L, aes(x=B365L, y=Loser)) +
-  geom_point(size=5, shape=20) +
+ggplot(Average_Wimbledon_SF_L, aes(x=Loser, y=B365L)) +
+  geom_bar(stat= "identity", fill= "red")+
+  coord_flip()+
   labs(title = "Average Betting Odds for Losing Player in Wimbledon SF")
 
 

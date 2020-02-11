@@ -1,0 +1,12 @@
+name: Tennis1
+title: Tennis1
+username:
+account: jhoffme1
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1784664
+bundleId: 2790904
+url: https://jhoffme1.shinyapps.io/Tennis1/
+when: 1581394402.5847
+asMultiple: FALSE
+asStatic: FALSE

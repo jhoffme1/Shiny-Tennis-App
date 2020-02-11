@@ -468,62 +468,63 @@ output$Fourth.Round.Wimbledon.Loss = renderPlot({
 #Betting odds for match and tournament QF-Final
 output$QF.Round.US.Win = renderPlot({
     
-    ggplot(Average_US_QF_W, aes(x=B365W, y=Winner)) +
-        geom_point(size=5, shape=20) +
-        theme_minimal() +
-        theme(axis.text.y= element_text(size= 7)) +
-        labs(title ="Average Betting Odds for Winning players in US QF")
+    ggplot(Average_US_QF_W, aes(x=Winner, y=B365W)) +
+        geom_bar(stat= "identity", fill= "blue")+
+        labs(title = "Average Betting Odds for Winning Player in US Open QuarterFinal")+
+        coord_flip()
     })
 
 output$QF.Round.US.Loss = renderPlot({
     
-    ggplot(Average_QF_US_L, aes(x=B365L, y=Loser)) +
-        geom_point(size=5, shape=20) +
+    ggplot(Average_QF_US_L, aes(x=Loser, y=B365L)) +
+        geom_bar(stat= "identity", fill= "red")+
         theme_minimal() +
-        theme(axis.text.y= element_text(size= 7)) +
-        labs(title ="Average Betting Odds for Losing players in US QF")
+        theme(axis.text.y= element_text(size= 8)) +
+        labs(title = "Average Betting Odds for Losing Player in US Open QuarterFinal")+
+        coord_flip()
     })
 
 output$QF.Round.French.Win = renderPlot({  
     
-    ggplot(Average_French_QF_W, aes(x=B365W, y=Winner)) +
-        geom_point(size=5, shape=20) +
-        theme_minimal() +
-        theme(axis.text.y= element_text(size= 7)) +
+    ggplot(Average_French_QF_W, aes(x=Winner, y=B365W)) +
+        geom_bar(stat= "identity", fill= "blue")+
+        coord_flip()+
         labs(title ="Average Betting Odds for Winning players in French Open QF")
     })
 
 output$QF.Round.French.Loss = renderPlot({
     
-    ggplot(Average_French_QF_L, aes(x=B365L, y=Loser)) +
-        geom_point(size=5, shape=20) +
+    ggplot(Average_French_QF_L, aes(x=Loser, y=B365L)) +
+        geom_bar(stat= "identity", fill= "red")+
+        coord_flip()+
         theme_minimal() +
-        theme(axis.text.y= element_text(size= 7)) +
+        theme(axis.text.y= element_text(size= 8)) +
         labs(title ="Average Betting Odds for Losing players in French Open QF")
     })
 
 output$QF.Round.Aussie.Win = renderPlot({
     
-    ggplot(Average_Aussie_QF_W, aes(x=B365W, y=Winner)) +
-        geom_point(size=5, shape=20) +
-        theme_minimal() +
-        theme(axis.text.y= element_text(size= 7)) +
+    ggplot(Average_Aussie_QF_W, aes(x=Winner, y=B365W)) +
+        geom_bar(stat= "identity", fill= "blue")+
+        coord_flip()+
         labs(title ="Average Betting Odds for Winning players in Aussie Open QF")
     })
 
 output$QF.Round.Aussie.Loss = renderPlot({
     
-    ggplot(Average_Aussie_QF_L, aes(x=B365L, y=Loser)) +
-        geom_point(size=5, shape=20) +
+    ggplot(Average_Aussie_QF_L, aes(x=Loser, y=B365L)) +
+        geom_bar(stat= "identity", fill= "red")+
+        coord_flip()+
         theme_minimal() +
-        theme(axis.text.y= element_text(size= 7)) +
+        theme(axis.text.y= element_text(size= 8)) +
         labs(title ="Average Betting Odds for Losing players in Aussie Open QF")
     })
 
 output$QF.Round.Wimbledon.Win = renderPlot({
     
-    ggplot(Average_Wimbledon_QF_W, aes(x=B365W, y=Winner)) +
-        geom_point(size=5, shape=20) +
+    ggplot(Average_Wimbledon_QF_W, aes(x=Winner, y=B365W)) +
+        geom_bar(stat= "identity", fill= "blue")+
+        coord_flip()+
         theme_minimal() +
         theme(axis.text.y= element_text(size= 7)) +
         labs(title ="Average Betting Odds for Winning players in Wimbledon QF")
@@ -531,79 +532,89 @@ output$QF.Round.Wimbledon.Win = renderPlot({
 
 output$QF.Round.Wimbledon.Loss = renderPlot({
     
-    ggplot(Average_Wimbledon_QF_L, aes(x=B365L, y=Loser)) +
-        geom_point(size=5, shape=20) +
+    ggplot(Average_Wimbledon_QF_L, aes(x=Loser, y=B365L)) +
+        geom_bar(stat= "identity", fill= "red")+
+        coord_flip()+
         theme_minimal() +
-        theme(axis.text.y= element_text(size= 5)) +
+        theme(axis.text.y= element_text(size= 8)) +
         labs(title ="Average Betting Odds for Losing players in Wimbledon QF")
     })
 
 
 output$SF.Round.US.Win = renderPlot({    
     
-    ggplot(Average_US_SF_W, aes(x=B365W, y=Winner)) +
-        geom_point(size=5, shape=20) +
+    ggplot(Average_US_SF_W, aes(x=Winner, y=B365W)) +
+        geom_bar(stat= "identity", fill= "blue")+
+        coord_flip()+
         theme_minimal() +
-        theme(axis.text.y= element_text(size= 7)) +
+        theme(axis.text.y= element_text(size= 8)) +
         labs(title ="Average Betting Odds for Winning players in US Open SF")
     })
 
 output$SF.Round.US.Loss = renderPlot({   
     
-    ggplot(Average_SF_US_L, aes(x=B365L, y=Loser)) +
-        geom_point(size=5, shape=20) +
+    ggplot(Average_SF_US_L, aes(x=Loser, y=B365L)) +
+        geom_bar(stat= "identity", fill= "red")+
+        coord_flip()+
         theme_minimal() +
-        theme(axis.text.y= element_text(size= 7)) +
+        theme(axis.text.y= element_text(size= 8)) +
         labs(title ="Average Betting Odds for Losing players in US Open SF")
     })
 
 output$SF.Round.French.Win = renderPlot({     
     
-    ggplot(Average_French_SF_W, aes(x=B365W, y=Winner)) +
-        geom_point(size=5, shape=20) +
+    ggplot(Average_French_SF_W, aes(x=Winner, y=B365W)) +
+        geom_bar(stat= "identity", fill= "blue")+
+        coord_flip()+
         labs(title = "Average Betting Odds for Winning Player in French SF")
     })
 
 output$SF.Round.French.Loss = renderPlot({ 
     
-    ggplot(Average_French_SF_L, aes(x=B365L, y=Loser)) +
-        geom_point(size=5, shape=20) +
+    ggplot(Average_French_SF_L, aes(x=Loser, y=B365L)) +
+        geom_bar(stat= "identity", fill= "red")+
+        coord_flip()+
         labs(title = "Average Betting Odds for Losing Player in French SF")
     })
 
 output$SF.Round.Aussie.Win = renderPlot({ 
     
-    ggplot(Average_Aussie_SF_W, aes(x=B365W, y=Winner)) +
-        geom_point(size=5, shape=20) +
+    ggplot(Average_Aussie_SF_W, aes(x=Winner, y=B365W)) +
+        geom_bar(stat= "identity", fill= "blue")+
+        coord_flip()+
         labs(title = "Average Betting Odds for Winning Player in Aussie SF")
     })
 
 output$SF.Round.Aussie.Loss = renderPlot({ 
     
-    ggplot(Average_Aussie_SF_L, aes(x=B365L, y=Loser)) +
-        geom_point(size=5, shape=20) +
+    ggplot(Average_Aussie_SF_L, aes(x=Loser, y=B365L)) +
+        geom_bar(stat= "identity", fill= "red")+
+        coord_flip()+
         labs(title = "Average Betting Odds for Losing Player in Aussie SF")
     })
 
 output$SF.Round.Wimbledon.Win = renderPlot({ 
     
-    ggplot(Average_Wimbledon_SF_W, aes(x=B365W, y=Winner)) +
-        geom_point(size=5, shape=20) +
+    ggplot(Average_Wimbledon_SF_W, aes(x=Winner, y=B365W)) +
+        geom_bar(stat= "identity", fill= "blue")+
+        coord_flip()+
         labs(title = "Average Betting Odds for Winning Player in Wimbledon SF")
     })
 
 output$SF.Round.Wimbledon.Loss = renderPlot({ 
     
-    ggplot(Average_Wimbledon_SF_L, aes(x=B365L, y=Loser)) +
-        geom_point(size=5, shape=20) +
+    ggplot(Average_Wimbledon_SF_L, aes(x=Loser, y=B365L)) +
+        geom_bar(stat= "identity", fill= "red")+
+        coord_flip()+
         labs(title = "Average Betting Odds for Losing Player in Wimbledon SF")
     })
 
 output$F.Round.US.Win = renderPlot({ 
     
-    ggplot(Average_F_W, aes(x=B365W, y=Winner, group=1)) +
-        geom_point(size=5, shape=20)+
-        labs(title = "Average Betting Odds for Winning Player in US Open Final")
+    ggplot(Average_F_L, aes(x=Loser, y=B365L)) +
+        geom_bar(stat= "identity", fill= "red")+
+        labs(title = "Average Betting Odds for Losing Player in US Open Final")+
+        coord_flip()
     })
 
 output$F.Round.US.Loss = renderPlot({ 
@@ -615,44 +626,50 @@ output$F.Round.US.Loss = renderPlot({
 
 output$F.Round.French.Win = renderPlot({
     
-    ggplot(Average_French_F_W, aes(x=B365W, y=Winner)) +
-        geom_point(size=5, shape=20) +
-        labs(title = "Average Betting Odds for Winning Player in French Open Final")
+    ggplot(Average_French_F_W, aes(x=Winner, y=B365W)) +
+        geom_bar(stat= "identity", fill= "blue")+
+        labs(title = "Average Betting Odds for Winning Player in French Open Final")+
+        coord_flip()
     })
 
 output$F.Round.French.Loss = renderPlot({
     
-    ggplot(Average_French_F_L, aes(x=B365L, y=Loser)) +
-        geom_point(size=5, shape=20)+
-        labs(title = "Average Betting Odds for Losing Player in French Open Final")
+    ggplot(Average_French_F_L, aes(x=Loser, y=B365L)) +
+        geom_bar(stat= "identity", fill= "red")+
+        labs(title = "Average Betting Odds for Losing Player in French Open Final")+
+        coord_flip()
     })
 
 output$F.Round.Aussie.Win = renderPlot({
     
-    ggplot(Average_Aussie_F_W, aes(x=B365W, y=Winner)) +
-        geom_point(size=5, shape=20)+
-        labs(title = "Average Betting Odds for Winning Player in Australian Open Final")
+    ggplot(Average_Aussie_F_W, aes(x=Winner, y=B365W)) +
+        geom_bar(stat= "identity", fill= "blue")+
+        labs(title = "Average Betting Odds for Winning Player in Aussie Open Final")+
+        coord_flip()
     })
 
 output$F.Round.Aussie.Loss = renderPlot({
     
-    ggplot(Average_Aussie_F_L, aes(x=B365L, y=Loser)) +
-        geom_point(size=5, shape=20)+
-        labs(title = "Average Betting Odds for Losing Player in Australian Open Final")
+    ggplot(Average_Aussie_F_L, aes(x=Loser, y=B365L)) +
+        geom_bar(stat= "identity", fill= "red")+
+        labs(title = "Average Betting Odds for Losing Player in Aussie Open Final")+
+        coord_flip()
     })
 
 output$F.Round.Wimbledon.Win = renderPlot({
     
-    ggplot(Average_Wimbledon_F_W, aes(x=B365W, y=Winner)) +
-        geom_point(size=5, shape=20)+
-        labs(title = "Average Betting Odds for Winning Player in Wimbledon Final")
+    ggplot(Average_Wimbledon_F_W, aes(x=Winner, y=B365W)) +
+        geom_bar(stat= "identity", fill= "blue")+
+        labs(title = "Average Betting Odds for Winning Player in Wimbledon Final")+
+        coord_flip()
     })
 
 output$F.Round.Wimbledon.Loss = renderPlot({
     
-    ggplot(Average_Wimbledon_F_L, aes(x=B365L, y=Loser)) +
-        geom_point(size=5, shape=20)+
-        labs(title = "Average Betting Odds for Losing Player in Wimbledon Final")
+    ggplot(Average_Wimbledon_F_L, aes(x=Loser, y=B365L)) +
+        geom_bar(stat= "identity", fill= "red")+
+        labs(title = "Average Betting Odds for Losing Player in Wimbledon Final")+
+        coord_flip()
     
     
 })
