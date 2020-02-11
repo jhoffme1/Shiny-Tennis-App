@@ -13,7 +13,7 @@ sidebar = dashboardSidebar(
                 menuItem("About the Project", tabName = "AbouttheProject",icon=icon("info")),
                 menuItem("Author Page",tabName="AboutMe",icon=icon("address-card")),
                 menuItem("Betting Trends Rounds 1-4",tabName = "Histograms",icon=icon("Histograms")),
-                menuItem("Betting Trends Rounds QF-Final",tabName = "ScatterPlots",icon=icon("Scatterplot")),
+                menuItem("Betting Trends Rounds QF-Final",tabName = "BarCharts",icon=icon("Scatterplot")),
                 menuItem("Win Loss Experince Comparison",tabName = "DensityPlot",icon=icon("Density Plot")),
                 menuItem("Conclusion",tabName = "cc",icon=icon("info"))
                                     
@@ -125,10 +125,10 @@ body = dashboardBody(
                 ))),
                         
                         
-        tabItem(tabName = "ScatterPlots",
+        tabItem(tabName = "BarCharts",
                 fluidRow(
                     tabBox(
-                        title= tagList(shiny::icon("Later Rounds"), "Scatter of Betting odds for Later Rounds"),
+                        title= tagList(shiny::icon("Later Rounds"), "Bar Charts of Betting odds for Later Rounds"),
                         id = 'tabset2',
                         tabPanel('QFUW', plotOutput('QF.Round.US.Win')),
                         tabPanel('QFUL', plotOutput('QF.Round.US.Loss')),

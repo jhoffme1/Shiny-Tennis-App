@@ -611,17 +611,18 @@ output$SF.Round.Wimbledon.Loss = renderPlot({
 
 output$F.Round.US.Win = renderPlot({ 
     
-    ggplot(Average_F_L, aes(x=Loser, y=B365L)) +
-        geom_bar(stat= "identity", fill= "red")+
-        labs(title = "Average Betting Odds for Losing Player in US Open Final")+
+    ggplot(Average_F_W, aes(x=Winner, y=B365W)) +
+        geom_bar(stat= "identity", fill= "blue")+
+        labs(title = "Average Betting Odds for Winning Player in US Open Final")+
         coord_flip()
     })
 
 output$F.Round.US.Loss = renderPlot({ 
     
-    ggplot(Average_F_L, aes(x=B365L, y=Loser)) +
-        geom_point(size=5, shape=20)+
-        labs(title = "Average Betting Odds for Losing Player in US Open Final")
+    ggplot(Average_F_L, aes(x=Loser, y=B365L)) +
+        geom_bar(stat= "identity", fill= "red")+
+        labs(title = "Average Betting Odds for Losing Player in US Open Final")+
+        coord_flip()
     })
 
 output$F.Round.French.Win = renderPlot({
